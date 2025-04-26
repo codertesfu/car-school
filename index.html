@@ -479,6 +479,107 @@ footer div a:hover {
     font-size: 12px;
   }
 }
+        /* Popup Modal */
+#popupModal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#popupModalContent {
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  animation: popupFadeIn 0.5s ease;
+  position: relative;
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#popupTitle {
+  font-size: 24px;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 10px;
+}
+
+#popupContent {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+/* Section Smooth Appear */
+section {
+  transition: all 0.8s ease-out;
+}
+
+/* Info Card Animation */
+.info-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* CTA Button Smooth Scroll (optional if you want to style it too) */
+.cta-btn {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #0055a5;
+  transform: translateY(-3px);
+}
+
+/* Hide and Show Header */
+#mainHeader {
+  transition: top 0.3s ease;
+}
+
+#mainHeader.hide {
+  top: -100px;
+}
+
+/* General Utilities */
+ul, ol {
+  padding-left: 20px;
+  color: #333;
+}
     </style>
 </head>
 
