@@ -93,64 +93,64 @@ h2::after {
   to { transform: rotate(360deg); }
 }
 
-/* Header */
-.navbar {
-  background: #003366;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Sidebar Navigation */
+nav {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #003366; /* dark blue */
+  padding-top: 40px;
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
   z-index: 999;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-container img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.logo-container img:hover {
-  transform: scale(1.1);
-}
-
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 20px 0;
+  text-align: center;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  font-size: 0.9rem;
-  padding: 5px;
-  transition: color 0.3s ease;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 8px;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  color: #3498db;
+  background-color: #0055a5;
+  transform: translateX(10px);
 }
 
+/* Space for page content next to sidebar */
+body {
+  margin-left: 220px;
+  font-family: Arial, sans-serif;
+}
+
+/* Responsive - sidebar collapses on small screens */
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  body {
+    margin: 0;
+  }
+}
 .hero {
   position: relative;
   height: 90vh;
@@ -300,33 +300,6 @@ nav ul li a:hover {
   color: #555;
 }
 
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-  /* Navbar adjustments */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  .logo-container {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    align-items: center;
-    margin-top: 15px;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-    padding: 8px 15px;
-  }
 
   /* Hero Section */
   .hero {
@@ -590,13 +563,7 @@ ul, ol {
     <div class="spinner"></div>
   </div>
 
-    <header class="navbar" id="mainHeader">
-        
-          <div class="logo-container">
-  
-  <img src="logo.jpg" alt="Driving School Logo">
-  <h1 class="logo">Africa Driving License School - Hawassa</h1>
-</div>
+
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -608,8 +575,7 @@ ul, ol {
                      
                 </ul>
             </nav>
-        
-    </header>
+ 
 
     <!-- Hero Section -->
     <section class="hero">
