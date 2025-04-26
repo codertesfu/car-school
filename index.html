@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="path_to_your_image/apple-touch-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <title>Africa Driving License School - Hawassa</title>
+    <title>Africa Driving License Center - Hawassa</title>
 
     <style>
 * {
@@ -647,6 +647,50 @@ ul, ol {
   padding-left: 20px;
   color: #333;
 }
+        /* Initially hide the navigation menu */
+.menu {
+    display: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.menu-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Mobile menu styles (can be customized) */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 15px 0;
+    }
+}
     </style>
 </head>
 
@@ -658,24 +702,28 @@ ul, ol {
   </div>
 
 
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#allcourses">All Courses</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    
-                     
-                </ul>
-            </nav>
+          <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+<nav class="menu">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#allcourses">All Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
  
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
            
-            <h2 style="color: white; font-size: 20px;">Welcome to Africa Driving License School - Hawassa</h2>
+            <h2 style="color: white; font-size: 20px;">Welcome to Africa Driving License Center - Hawassa</h2>
             <p>Our prices are commensurate with the capacity of our clients and we have arranged for our trainees to pay once, twice or three times as much as they can afford.
 
 </p>
@@ -1226,6 +1274,7 @@ let header = document.getElementById('mainHeader');
   });
 </script>
 <script>
+
     window.onload = function () {
     setTimeout(function () {
       document.getElementById("loader").style.display = "none";
@@ -1234,7 +1283,15 @@ let header = document.getElementById('mainHeader');
     }, 2500); 
   };
 </script>
+<script>
+        const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
 
+menuToggle.addEventListener('click', function() {
+    // Toggle the display property of the menu
+    menu.style.display = (menu.style.display === 'block' ? 'none' : 'block');
+});
+</script>
 
 </body>
 
