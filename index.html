@@ -102,17 +102,58 @@ nav ul li a:hover {
   color: #3498db;
 }
 
-/* Hero Section */
 .hero {
-  background: url('your-hero-background.jpg') no-repeat center center/cover;
+  position: relative;
   height: 90vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
   padding: 20px;
-  position: relative;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+  animation: changeBackground 15s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animation Keyframes */
+@keyframes changeBackground {
+  0% {
+    background-image: url('a.jpg');
+  }
+  33% {
+    background-image: url('b.jpg');
+  }
+  66% {
+    background-image: url('c.jpg');
+  }
+  100% {
+    background-image: url('a.jpg');
+  }
+}
+
+/* Hero Content */
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* Optional: slight dark overlay */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
 
 .hero-content h2 {
@@ -424,7 +465,7 @@ footer div a:hover {
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br><br>
+           
             <h2 style="color: white; font-size: 20px;">Welcome to Africa Driving License School - Hawassa</h2>
             <p>Our prices are commensurate with the capacity of our clients and we have arranged for our trainees to pay once, twice or three times as much as they can afford.
 
@@ -826,14 +867,11 @@ As the demand for driving courses continues to grow, it has become increasingly 
       <p><strong>🌐 Website:</strong> <a href="http://www.africadrivers.com" target="_blank">www.africadrivers.com</a></p>
     
 
-    <!-- Branches -->
    
-      <p style="color: white;"><strong>🌍 Our Branches:</strong></p>
-      <ul>
-        <li>Africa Driving License School Hawassa Branch :- 046-0000000</li>
-        <br><br>
-        <li>Africa Driving License School Addis Ababa Branch:- 011-000000</li>
-      </ul>
+       <p> Africa Driving License School Hawassa Branch :- 046-000000</p>
+        
+       <p> Africa Driving License School Addis Ababa Branch:- 011-000000</p>
+      
    </div>
   </section>
 
