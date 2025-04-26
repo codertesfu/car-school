@@ -68,7 +68,6 @@ h2::before {
   z-index: -1;
   transform: scale(1.05);
 }
-/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -81,6 +80,15 @@ h2::before {
   justify-content: center;
   color: #fff;
   text-align: center;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    background-size: 80%; /* Reduce background image size on mobile */
+    background-position: center top; /* Adjust position if needed */
+    height: 70vh; /* Optional: reduce height for better fit */
+  }
 }
 .hero-overlay {
   position: absolute;
